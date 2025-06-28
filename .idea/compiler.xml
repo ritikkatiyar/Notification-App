@@ -7,14 +7,9 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/3.3.13/faf31cf602c6c5cd0ddd0f2715a46f94129b5e69/spring-boot-configuration-processor-3.3.13.jar" />
         </processorPath>
-        <module name="dispatcher-service.main" />
+        <module name="retry-scheduler-service.main" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="retry-scheduler-service" target="21" />
-      <module name="retry-scheduler-service.main" target="21" />
-      <module name="retry-scheduler-service.test" target="21" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
