@@ -14,3 +14,22 @@ Consumes Kafka topic and mocks sending SMS
 ✅ 5. retry-scheduler-service
 Periodic retry logic using Kafka + Redis queue
 
+[API Client]
+│
+▼
+api-service
+└── kafkaTemplate.send("notification-topic", request);
+│
+▼
+Kafka Topic: notification-topic
+│
+▼
+dispatcher-service
+└── @KafkaListener(topics = "notification-topic")
+route(NotificationRequest request)
+└── kafkaTemplate.send("email-topic", request);
+└── Kafka Topic: email-topic
+▼
+email-sender-service (listener)
+
+

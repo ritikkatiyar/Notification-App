@@ -21,9 +21,13 @@ configurations {
 
 repositories {
 	mavenCentral()
+	flatDir {
+		dirs 'lib'  // 👈 tells Gradle to look inside /libs
+	}
 }
 
 dependencies {
+	implementation name: 'common-lib-1.0.0'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.kafka:spring-kafka'
